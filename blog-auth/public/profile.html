@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Profile | BlogApp</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="profile" class="guard">
+  <header id="navbar"></header>
+  <main class="container">
+    <div class="profile-grid">
+
+      <section class="card">
+        <div class="profile-head">
+          <div class="avatar" id="avatar">?</div>
+          <div>
+            <h1 id="pName"></h1>
+            <div class="meta" id="pEmail"></div>
+          </div>
+        </div>
+        <p id="pBio" class="subtitle"></p>
+        <div class="meta" id="pMeta"></div>
+        <div class="btn-row" style="margin-top:14px">
+          <a class="btn btn-outline btn-sm" href="dashboard.html">Go to dashboard</a>
+          <a class="btn btn-sm" href="create-blog.html">Write a blog</a>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Edit profile</h2>
+        <form id="profileForm" novalidate>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" maxlength="60" required />
+          <label for="bio">Bio</label>
+          <textarea id="bio" name="bio" maxlength="200" style="min-height:90px" placeholder="Tell readers a little about yourself"></textarea>
+          <div class="char-count" id="bioCount">0/200</div>
+          <div class="field-error" id="profileError" role="alert"></div>
+          <div class="success-text" id="profileOk"></div>
+          <button class="btn" type="submit">Save profile</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Change password</h2>
+        <p class="subtitle">Changing your password signs you out on all your other devices.</p>
+        <form id="passwordForm" novalidate>
+          <label for="currentPassword">Current password</label>
+          <input id="currentPassword" name="currentPassword" type="password" autocomplete="current-password" required />
+          <label for="newPassword">New password</label>
+          <input id="newPassword" name="newPassword" type="password" autocomplete="new-password" placeholder="8+ characters, letters and numbers" required />
+          <div class="strength"><span id="strengthBar"></span></div>
+          <div class="strength-label" id="strengthLabel"></div>
+          <label for="confirm">Confirm new password</label>
+          <input id="confirm" name="confirm" type="password" autocomplete="new-password" required />
+          <label class="inline-check"><input type="checkbox" id="showPw" /> Show passwords</label>
+          <div class="field-error" id="passwordError" role="alert"></div>
+          <div class="success-text" id="passwordOk"></div>
+          <button class="btn" type="submit">Change password</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Sessions</h2>
+        <p class="subtitle">Logged in somewhere you no longer trust? End every session at once.</p>
+        <button class="btn btn-outline" id="logoutAllBtn" type="button">Sign out on all devices</button>
+      </section>
+
+      <section class="card danger-zone">
+        <h2>Delete account</h2>
+        <p class="subtitle">Permanently removes your account and all of your blog posts.</p>
+        <form id="deleteForm" novalidate>
+          <label for="delPassword">Confirm with your password</label>
+          <input id="delPassword" name="password" type="password" autocomplete="current-password" />
+          <div class="field-error" id="deleteError" role="alert"></div>
+          <button class="btn btn-danger" type="submit">Delete my account</button>
+        </form>
+      </section>
+
+    </div>
+  </main>
+  <footer id="footer"></footer>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

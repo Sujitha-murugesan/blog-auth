@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home | BlogApp</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="home">
+  <header id="navbar"></header>
+  <main class="container">
+    <section class="hero">
+      <h1>Share your stories with the world</h1>
+      <p>A simple place to read, write and publish blogs. Join the community today.</p>
+      <a class="btn" id="heroCta" href="register.html">Get started</a>
+    </section>
+    <div class="toolbar"><h2>Latest posts</h2></div>
+    <div class="chips" id="chips" aria-label="Categories"></div>
+    <div class="filter-bar">
+      <input type="search" id="search" placeholder="Search by title or content…" aria-label="Search blogs" />
+      <select id="sort" aria-label="Sort blogs">
+        <option value="newest">Newest first</option>
+        <option value="oldest">Oldest first</option>
+        <option value="title">Title A–Z</option>
+      </select>
+    </div>
+    <div class="results-info" id="resultsInfo"></div>
+    <div class="blog-grid" id="blogGrid"></div>
+    <div class="pagination" id="pagination"></div>
+  </main>
+  <footer id="footer"></footer>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

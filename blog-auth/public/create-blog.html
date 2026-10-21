@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Create Blog | BlogApp</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="create" class="guard">
+  <header id="navbar"></header>
+  <main class="container">
+    <div class="card form-card wide">
+      <h1 id="pageTitle">Create a new blog</h1>
+      <p class="subtitle">Write something great.</p>
+      <form id="blogForm" novalidate>
+        <label for="title">Title</label>
+        <input id="title" name="title" type="text" maxlength="120" placeholder="An interesting title" required />
+        <label for="category">Category</label>
+        <select id="category" name="category">
+          <option>General</option><option>HTML</option><option>CSS</option>
+          <option>JavaScript</option><option>Career</option><option>Lifestyle</option>
+        </select>
+        <label for="content">Content</label>
+        <textarea id="content" name="content" placeholder="Start writing…" required></textarea>
+        <div class="char-count" id="charCount">0 words</div>
+        <div class="field-error" id="formError" role="alert"></div>
+        <button class="btn" id="submitBtn" type="submit">Publish</button>
+        <a class="btn btn-outline" href="dashboard.html">Cancel</a>
+      </form>
+    </div>
+  </main>
+  <footer id="footer"></footer>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

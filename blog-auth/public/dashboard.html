@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard | BlogApp</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="dashboard" class="guard">
+  <header id="navbar"></header>
+  <main class="container">
+    <div class="card dash-profile" id="dashProfile"></div>
+    <div class="toolbar">
+      <div><h1 id="welcome">Dashboard</h1><p class="subtitle">Here's an overview of your blogging activity.</p></div>
+      <a class="btn" href="create-blog.html">+ New blog</a>
+    </div>
+    <section class="stats">
+      <div class="card stat"><div class="num" id="statPosts">0</div><div class="label">Total posts</div></div>
+      <div class="card stat"><div class="num" id="statWords">0</div><div class="label">Words written</div></div>
+      <div class="card stat"><div class="num" id="statLatest">—</div><div class="label">Latest post</div></div>
+    </section>
+    <h2 style="margin-bottom:14px">Your posts</h2>
+    <div class="filter-bar">
+      <input type="search" id="dSearch" placeholder="Search your posts…" aria-label="Search your posts" />
+      <select id="dCategory" aria-label="Filter by category"><option value="">All categories</option></select>
+      <select id="dSort" aria-label="Sort posts">
+        <option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="title">Title A–Z</option>
+      </select>
+    </div>
+    <div class="post-list" id="myPosts"></div>
+  </main>
+  <footer id="footer"></footer>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

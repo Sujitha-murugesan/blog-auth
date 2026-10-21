@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register | BlogApp</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="register">
+  <header id="navbar"></header>
+  <main class="container">
+    <div class="card form-card">
+      <h1>Create account</h1>
+      <p class="subtitle">It only takes a minute.</p>
+      <form id="registerForm" novalidate>
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" placeholder="Your name" required autocomplete="name" />
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="email" />
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="8+ characters, letters and numbers" required autocomplete="new-password" />
+        <div class="strength"><span id="strengthBar"></span></div>
+        <div class="strength-label" id="strengthLabel"></div>
+        <label for="confirm">Confirm password</label>
+        <input id="confirm" name="confirm" type="password" placeholder="Repeat password" required autocomplete="new-password" />
+        <label class="inline-check"><input type="checkbox" id="showPw" /> Show passwords</label>
+        <div class="field-error" id="formError" role="alert"></div>
+        <button class="btn btn-block" type="submit">Register</button>
+      </form>
+      <p class="form-footer">Already registered? <a href="login.html">Login</a></p>
+    </div>
+  </main>
+  <footer id="footer"></footer>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
